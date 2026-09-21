@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#ff5a36" />
+    <meta name="description" content="FOODORA - food delivery marketplace" />
+    <title>FOODORA | Food delivered beautifully</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="#top" aria-label="Foodora home"><span class="brand-mark">F</span><span>FOODORA</span></a>
+        <label class="search-box"><span class="search-icon">⌕</span><input id="searchInput" type="search" placeholder="Search for dishes, restaurants..." /><kbd>/</kbd></label>
+        <div class="header-actions">
+          <button class="location-button" id="locationButton"><span class="pin">⌖</span><span><small>Deliver to</small><strong>Manhattan, NY</strong></span><span class="chevron">⌄</span></button>
+          <button class="icon-button" title="Your orders" aria-label="Your orders" data-toast="Your order history is ready">◷</button>
+          <button class="icon-button" title="Favorites" aria-label="Favorites" data-toast="Your favorites are saved">♡</button>
+          <button class="cart-button" id="cartButton"><span>Cart</span><b id="cartCount">0</b></button>
+        </div>
+      </header>
+
+      <main id="top">
+        <section class="hero section-wrap">
+          <div class="hero-copy">
+            <p class="eyebrow"><span class="eyebrow-dot"></span> Hungry? We are on the way.</p>
+            <h1>Good food.<br /><em>Good mood.</em></h1>
+            <p class="hero-text">Your city’s best bites, delivered fresh and fast. Find your next favorite meal in a few taps.</p>
+            <div class="hero-cta-row"><button class="primary-button" id="exploreButton">Explore restaurants <span>→</span></button><div class="delivery-note"><span class="mini-icon">✦</span><span><b>30 min</b><small>average delivery</small></span></div></div>
+          </div>
+          <div class="hero-visual"><div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div><div class="hero-label label-top">fresh<br /><b>every day</b></div><div class="hero-label label-bottom">made with<br /><b>good stuff</b></div><div class="hero-image-wrap"><img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=1100&q=85" alt="Fresh pizza with basil" /></div><div class="hero-sticker">100%<br /><small>tasty</small></div></div>
+        </section>
+
+        <section class="section-wrap category-section"><div class="section-heading"><div><p class="kicker">Explore the menu</p><h2>What are you craving?</h2></div><button class="text-button" id="allCategories">View all <span>→</span></button></div><div class="category-grid" id="categoryGrid"></div></section>
+
+        <section class="section-wrap restaurant-section" id="restaurants"><div class="section-heading"><div><p class="kicker">Picked for you</p><h2>Restaurants near you</h2></div><div class="filter-row"><button class="filter-button active" data-filter="all">All</button><button class="filter-button" data-filter="fast">Fast delivery</button><button class="filter-button" data-filter="top">Top rated</button><button class="filter-button" data-filter="offers">Offers</button></div></div><div class="restaurant-grid" id="restaurantGrid"></div></section>
+
+        <section class="promo-band section-wrap"><div><p class="kicker">The good stuff</p><h2>Deals worth<br /><em>sharing.</em></h2><p>Big flavors, smaller prices. Check out today’s specials from the spots you love.</p><button class="light-button" data-toast="Deals are coming right up">See all deals <span>→</span></button></div><div class="promo-art"><div class="burst">UP<br />TO<br /><b>30%</b></div><img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=700&q=85" alt="Colorful healthy bowl" /></div></section>
+
+        <section class="section-wrap popular-section"><div class="section-heading"><div><p class="kicker">Most loved</p><h2>Popular right now</h2></div><button class="text-button" data-toast="Showing all popular dishes">See all <span>→</span></button></div><div class="dish-grid" id="dishGrid"></div></section>
+      </main>
+
+      <footer class="footer"><div class="footer-main section-wrap"><div class="footer-brand"><a class="brand" href="#top"><span class="brand-mark">F</span><span>FOODORA</span></a><p>Good food, good mood.<br />Delivered with care.</p></div><div><h3>Discover</h3><a href="#restaurants">Restaurants</a><a href="#top">Categories</a><a href="#top">Deals</a></div><div><h3>Company</h3><a href="#top">About us</a><a href="#top">Careers</a><a href="#top">Become a partner</a></div><div><h3>Need help?</h3><a href="#top">Support center</a><a href="#top">Track order</a><a href="#top">Contact us</a></div><div class="app-promo"><span>Get the app</span><strong>Foodora in your pocket.</strong><button class="app-button" data-toast="App download link copied">↗ Download app</button></div></div><div class="footer-bottom section-wrap"><span>© 2024 FOODORA. Made for food people.</span><span>Privacy · Terms · Cookies</span><span class="socials">◎　◉　◌</span></div></footer>
+    </div>
+
+    <div class="drawer-backdrop" id="drawerBackdrop"></div><aside class="cart-drawer" id="cartDrawer"><div class="drawer-head"><div><p class="kicker">Ready when you are</p><h2>Your cart <span id="drawerCount">0</span></h2></div><button class="close-button" id="closeCart">×</button></div><div class="cart-items" id="cartItems"><div class="empty-cart"><span>✦</span><h3>Your cart is waiting</h3><p>Add something delicious to get started.</p></div></div><div class="cart-summary" id="cartSummary"><div><span>Subtotal</span><b id="subtotal">$0.00</b></div><div><span>Delivery</span><b id="delivery">$0.00</b></div><div class="total-line"><span>Total</span><b id="total">$0.00</b></div><button class="primary-button checkout-button" id="checkoutButton">Go to checkout <span>→</span></button></div></aside>
+    <div class="modal-backdrop" id="modalBackdrop"><div class="dish-modal" role="dialog" aria-modal="true"><button class="close-button" id="closeModal">×</button><img id="modalImage" src="" alt="" /><div class="modal-content"><p class="kicker" id="modalRestaurant"></p><h2 id="modalName"></h2><p id="modalDescription"></p><div class="choice-block"><strong>Choose your size</strong><div class="choice-row" id="sizeChoices"></div></div><div class="choice-block"><strong>Make it extra</strong><div class="extra-grid" id="extraChoices"></div></div><div class="modal-add-row"><div><small>Total</small><b id="modalPrice">$0.00</b></div><button class="primary-button" id="addToCartButton">Add to cart <span>+</span></button></div></div></div></div>
+    <div class="toast" id="toast"></div><script src="app.js"></script>
+  </body>
+</html>
