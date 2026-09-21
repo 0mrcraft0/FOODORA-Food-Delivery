@@ -8,6 +8,7 @@ body:after{width:300px;height:300px;left:-150px;bottom:80px;background:radial-gr
 .category-card,.restaurant-card,.dish-card{animation:riseIn .55s ease both}.category-card:nth-child(2),.restaurant-card:nth-child(2),.dish-card:nth-child(2){animation-delay:.06s}.category-card:nth-child(3),.restaurant-card:nth-child(3),.dish-card:nth-child(3){animation-delay:.12s}.category-card:nth-child(4),.restaurant-card:nth-child(4),.dish-card:nth-child(4){animation-delay:.18s}
 .category-card{border-color:rgba(255,255,255,.8);box-shadow:0 8px 18px rgba(38,32,26,.035)}.category-card:hover,.category-card.selected{box-shadow:0 12px 24px rgba(71,151,98,.12)}
 .restaurant-card{box-shadow:0 12px 28px rgba(42,35,28,.07)}.restaurant-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(20,15,10,.12));pointer-events:none}.heart{z-index:1}
+.heart.is-favorite{color:var(--orange);background:#fff0eb;transform:scale(1.08)}.heart.is-favorite:hover{background:#ffe1d8}
 .promo-band{position:relative}.promo-band:after{content:"✦  ✦  ✦";position:absolute;right:8%;top:17%;font-size:24px;letter-spacing:14px;color:rgba(255,255,255,.25);transform:rotate(-12deg)}
 .dish-image{box-shadow:0 10px 22px rgba(42,35,28,.07)}.add-dish{transition:transform .2s,background .2s}.add-dish:hover{transform:rotate(90deg) scale(1.08);background:var(--yellow)}
 @keyframes riseIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}@keyframes floatGlow{0%,100%{transform:translate(0,0)}50%{transform:translate(18px,-22px)}}
